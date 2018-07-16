@@ -1,0 +1,13 @@
+@import './menu';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  background-color: #ccc;
+  color: #333333;
+  font-family: 'Roboto', sans-serif;
+} 
+
+header {
+  background: url('../images/bg.jpg');
+  height: 50vh;
+}
