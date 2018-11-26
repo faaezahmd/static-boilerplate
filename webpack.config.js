@@ -21,7 +21,7 @@ module.exports = {
       }
     }
   },
-  entry: ['./src/js/main.js', './src/sass/style.scss'],
+  entry: ['@babel/polyfill', './src/js/main.js', './src/sass/style.scss'],
   output: {
     path: path.resolve(__dirname, 'dist/js'),
     filename: 'bundle.js'

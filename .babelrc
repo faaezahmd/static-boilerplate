@@ -2,7 +2,7 @@
   "presets": [
     ["env", {
       "targets": {
-        "browsers": [ ">0.10%", "not op_mini all"]
+        "browsers": [ ">0.10%"]
       }
     }]
   ]

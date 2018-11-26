@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "css-loader": "^0.28.11",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.3",
