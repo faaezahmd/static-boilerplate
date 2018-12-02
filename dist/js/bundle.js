@@ -3218,7 +3218,19 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! @babel/polyfill */ \"./node_modules/@babel/polyfill/lib/index.js\");\n\n//# sourceURL=webpack:///./src/js/main.js?");
+eval("\n\n__webpack_require__(/*! @babel/polyfill */ \"./node_modules/@babel/polyfill/lib/index.js\");\n\nvar _tetris = __webpack_require__(/*! ./tetris */ \"./src/js/tetris.js\");\n\nvar _tetris2 = _interopRequireDefault(_tetris);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(0, _tetris2.default)();\n// var btn = document.querySelector('#adda');\n\n// btn.addEventListener('click', function(e) {\n// \te.preventDefault();\n// \tconsole.log('Clicked!');\n// });\n\n// import select from './select';\n\n//# sourceURL=webpack:///./src/js/main.js?");
+
+/***/ }),
+
+/***/ "./src/js/tetris.js":
+/*!**************************!*\
+  !*** ./src/js/tetris.js ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n\tvalue: true\n});\nvar tetris = function tetris() {\n\tvar canvas = document.getElementById('tetris');\n\tvar ctx = canvas.getContext('2d');\n\n\tctx.scale(20, 20);\n\tctx.fillStyle = '#000';\n\tctx.fillRect(0, 0, canvas.width, canvas.height);\n\n\tvar matrix = [[0, 0, 0], [1, 1, 1], [0, 1, 0]];\n\n\tfunction drawMatrix(matrix, offset) {\n\t\tmatrix.forEach(function (row, y) {\n\t\t\trow.forEach(function (value, x) {\n\t\t\t\tif (value !== 0) {\n\t\t\t\t\tctx.fillStyle = 'red';\n\t\t\t\t\tctx.fillRect(x + offset.x, y + offset.y, 1, 1);\n\t\t\t\t}\n\t\t\t});\n\t\t});\n\t}\n\n\tdrawMatrix(matrix, { x: 3, y: 4 });\n\n\tconsole.log('tetris');\n};\n\nexports.default = tetris;\n\n//# sourceURL=webpack:///./src/js/tetris.js?");
 
 /***/ }),
 
